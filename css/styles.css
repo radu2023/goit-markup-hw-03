@@ -94,13 +94,14 @@ header {
 
 .header-item {
     display: inline;
-    padding: 24px 0;
+    padding: 24px 0px;
 }
 
 .header-link-active,  
 .header-link:hover,
 .header-link:focus {
     color: var(--pressed-color-header);
+    padding: 24px 0;
 }
 
 .header-link {
@@ -112,7 +113,8 @@ header {
     text-align: left;
     color: var(--primary-color);
     text-decoration: none;
-    } 
+    padding: 24px 0;
+} 
 
 .address-container {
     display: flex;
@@ -209,7 +211,7 @@ header {
     padding: 0;
 }
 
-/* .visually-hidden {
+.visually-hidden {
         position: absolute;
         width: 1px;
         height: 1px;
@@ -220,7 +222,7 @@ header {
         clip-path: inset(100%);
         clip: rect(0, 0, 0, 0);
         border: 0; 
-} */
+}
 
 .feature-container {
     display: flex;
