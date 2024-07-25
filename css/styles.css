@@ -38,7 +38,7 @@ img {
     display: block;
 } 
 
-.header {
+header {
     border-bottom: 1px solid #e7e9fc;
 }
 
@@ -89,13 +89,12 @@ img {
     display: flex; 
     list-style: none; 
     gap: 40px;
-    padding: 0; 
+    padding: 24px 0; 
 }
 
 .header-item {
     display: inline;
-    padding: 24px 0;
-    }
+}
 
 .header-link-active,  
 .header-link:hover,
@@ -210,7 +209,14 @@ img {
 }
 
 .visually-hidden {
-    display: none;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
 }
 
 .feature-container {
@@ -329,23 +335,25 @@ img {
 
 .third-section {
     background-color: var(--white-color);
+    padding-top: 120px;
+    padding-bottom: 120px;
 } 
 
 .portfolio-container {
-    padding-top: 120px; 
-    padding-bottom: 120px; 
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .portfolio-rows {
     display: flex; 
     flex-direction: column; 
-    gap: 48px;
 }
 
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px; 
+    column-gap: 24px;
+    row-gap: 48px; 
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -354,8 +362,25 @@ img {
 
 .card-content {
     padding: 32px 16px 32px 16px;
+    border: 1px solid #e7e9fc;
+    border-top: none;
+    width: 100%;
 }
 
+.team-card {
+    width: calc((100% - 48px) / 3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+} 
+
+.team-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
 
 .first-section-subtitle {
@@ -373,17 +398,12 @@ img {
 
 .footer-menu {
     background-color: var(--primary-color); 
+    padding: 100px 0;
 } 
 
-.footer-box {
-    margin-top: 100px; 
-    margin-bottom: 100px;
-    margin-left: 156px; 
-    margin-right: 1020px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding: 100px 156px;
+.footer-logo {
+    display: inline-block; 
+    margin-bottom: 16px;
 }
 
 .footer-description {
@@ -394,6 +414,7 @@ img {
     text-align: left;
     color: var(--cloud-white-color);
     margin-top: 0;
+    max-width: 264px;
 } 
   
 .footer-logo {
@@ -404,3 +425,4 @@ img {
 .logo-part-white {
     color: var(--cloud-white-color);
 }
+
